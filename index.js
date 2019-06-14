@@ -8,7 +8,7 @@ function computerPlay(){
 
 var playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
 var outcomeComputer = computerPlay()
-console.log(playRound(outcomeComputer, playerSelection))
+return (playRound(outcomeComputer, playerSelection))
 
 function playRound(computer,player){
     switch(computer){
