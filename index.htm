@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <script src="index.js"></script>
     </head>
     <body>
-        
+        <div id="game-holder" class="flex-container">
+            <h1 id="game-score"></h1>
+            <label for="number-of-games">How many games do you want to play?</label>
+            <input type="number" name="number-of-games" id="number-of-games">
+            <label for="player-selection">Enter an option</label>
+            <input type="text" placeholder="Rock, paper or scissors?" id="player-selection" name="player-selection">
+            <button onclick="submitPlayerSelection()">Go!</button>
+        </div>
     </body>
 </html>
