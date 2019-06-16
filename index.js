@@ -1,5 +1,7 @@
 var score = [0,0]
 
+
+
 function computerPlay(){
     var outcomes = ['rock', 'paper', 'scissors']
     var x = Math.floor((Math.random()*3))
@@ -60,7 +62,7 @@ function playRound(computer,player,score,numberOfGames){
 }
 }
 function submitPlayerSelection(){
-    
+
     var playerSelection = document.getElementById("player-selection").value
     var outcomeComputer = computerPlay();
     var numberOfGames = document.getElementById('number-of-games').value
