@@ -1,3 +1,5 @@
+var score = [0,0]
+
 function computerPlay(){
     var outcomes = ['rock', 'paper', 'scissors']
     var x = Math.floor((Math.random()*3))
@@ -6,21 +8,23 @@ function computerPlay(){
 }
 
 
-function playRound(computer,player,score){
+function playRound(computer,player,score,numberOfGames){
+    
     switch(computer){
         case 'rock':
-           if( player == 'rock'){
+           if( player == 'paper'){
             //print("It's a tie!");
-            return("It's a tie!")
-           } else if (player == 'paper'){
-            //print("You won!");
             score[0] = score[0]+1;
-            return ("You won!")
-           } else {
+            //print("You won!");
+            return ("You won!",score[0])
+           } else if (player == 'rock'){
+            return("It's a tie!")
+           } else if(player == 'scissors'){
             //print("You lost");
             score[1] = score[1]+1;
             return ("You lost")
            }
+           numberOfGames = numberOfGames - 1
            break;
         case 'paper':
             if( player == 'paper'){
@@ -29,12 +33,13 @@ function playRound(computer,player,score){
             } else if (player == 'scissors'){
                 //print("You won!")
                 score[0] = score[0]+1;
-                return ("You won!")
-            } else {
+                return ("You won!",score[0])
+            } else if (player == 'rock') {
                 //print("You lost")
                 score[1] = score[1]+1;
                 return ("You lost")
             } 
+            numberOfGames = numberOfGames - 1
             break;
         case 'scissors':
             if( player == 'scissors'){
@@ -43,24 +48,37 @@ function playRound(computer,player,score){
             } else if (player == 'rock'){
                 //print("You won!")
                 score[0] = score[0]+1;
-                return ("You won!")
-            } else {
+                return ("You won!",score[0])
+            } else if(player == 'paper') {
                 //print("You lost")
                 score[1] = score[1]+1;
                 return ("You lost")
+                
             }   
             
-
+            
 }
 }
 function submitPlayerSelection(){
-    var playerSelection = document.getElementById("player-selection").innerHTML
-    var computer = computerPlay();
-    var score = [0,0]
-    playRound(computer,playerSelection,score)
-    console.log(score[0])
-    console.log(score[1])
-    document.getElementById("game-score").innerHTML = score[0] + '' + score[1]
+    
+    var playerSelection = document.getElementById("player-selection").value
+    var outcomeComputer = computerPlay();
+    var numberOfGames = document.getElementById('number-of-games').value
+    if( numberOfGames > 0){
+        document.getElementById('number-of-games-container').style = 'display:none'
+    }
+    if (numberOfGames = 0){
+        document.getElementById('number-of-games-container').style = 'display:none'
+        document.getElementById('player-selection-container').style = 'display:none'
+    }
+    
+    var x = document.getElementById("number-of-games")
+    
+    playRound(outcomeComputer,playerSelection,score,numberOfGames)
+    
+    document.getElementById("game-score").innerHTML = 'Human: ' + score[0] + ' - ' + score[1] + ' : Computer'
+    document.getElementById('number-of-games').stepDown(1)
+    console.log(numberOfGames)
 }
 
 /*function game(){
