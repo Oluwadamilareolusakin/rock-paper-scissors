@@ -3,21 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <script src="index.js"></script>
-        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-            <div id="game-holder" class="flex-container">
-            <h1 id="game-score">Human: 0 - 0 :Computer</h1>
-            <div id="number-of-games-container" class="input-containers">
-                <div class="game-label"><label for="number-of-games">How many games do you want to play?</label></div>   
-                <input type="number" name="number-of-games" id="number-of-games">
-            </div>
-            <div id="player-selection-container" class="input-containers">
-            <div class="game-label"><label for="player-selection">Enter an option</label></div>      
-            <input type="text" placeholder="Rock, paper or scissors?" id="player-selection" name="player-selection">
-            
-            </div>
-        <button onclick="submitPlayerSelection()">Go!</button>
+        <div id="game-holder" class="flex-container">
+        <h1 class="game-el">Rock, paper, scissors?</h1>
+        <div id="player-selection-container" class="input-containers game-el">
+        <div class="game-label"><label for="player-selection">Enter an option</label></div>      
+        <input type="text" placeholder="Rock, paper or scissors?" id="player-selection" name="player-selection">
+        <button>GO!</button>
+        </div>
     </div>
     </body>
 </html>

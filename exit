@@ -1,0 +1,35 @@
+[33mcommit a53c85628fb4fa70c1d1751be47856eaaa4941c7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Tolulope Oluwadamilare Olusakin <oluwadamilare_olusakin@yahoo.com>
+Date:   Sun Jun 16 02:32:40 2019 +0100
+
+    Add basic css with flexbox property to justify and align game to the center
+
+[33mcommit 9ae3734212523aa2bf9793e1ba346f3cd92188b1[m
+Author: Tolulope Oluwadamilare Olusakin <oluwadamilare_olusakin@yahoo.com>
+Date:   Sun Jun 16 01:55:01 2019 +0100
+
+    Fix score counter for computer vs human
+
+[33mcommit be62435f27f8f57baf4ff0f2680ba9d1c195f318[m
+Author: Tolulope Oluwadamilare Olusakin <oluwadamilare_olusakin@yahoo.com>
+Date:   Sun Jun 16 00:08:38 2019 +0100
+
+    Add basic UI to game
+
+[33mcommit a452118aedce020ba2dc826a5e3aff0bd3698c23[m
+Author: Tolulope Oluwadamilare Olusakin <oluwadamilare_olusakin@yahoo.com>
+Date:   Sat Jun 15 00:08:23 2019 +0100
+
+    Finish play round
+
+[33mcommit ce29037c8eb3cf7832e9f546a4930b7c3e4bcd8f[m
+Author: Tolulope Oluwadamilare Olusakin <oluwadamilare_olusakin@yahoo.com>
+Date:   Fri Jun 14 23:34:50 2019 +0100
+
+    Build function to get computer's results and play a round
+
+[33mcommit 58f347fb1fe3fb3b20b3ca158749c3dccce0bd23[m
+Author: Tolulope Oluwadamilare Olusakin <Oluwadamilare_olusakin@yahoo.com>
+Date:   Fri Jun 14 18:41:32 2019 +0100
+
+    Initial commit

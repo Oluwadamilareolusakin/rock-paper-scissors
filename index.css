@@ -19,3 +19,24 @@ body div.flex-container{
 #number-of-games-container{
     display: none;
 }
+
+button.options{
+    background-color:#27b573;
+    color: aliceblue;
+    border: none;
+    padding: 1em 2em;
+
+    margin-right: 2em;
+}
+
+.game-el{
+    margin-bottom: 1em;
+}
+
+h1{
+    font-size: 4em;
+}
+
+h2{
+    font-size: 3em;
+}
