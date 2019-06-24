@@ -18,15 +18,15 @@ const playRound = () =>{
     let computer = computerPlay();
 
     switch(computer){
-        case 'rock':
-           if( player == 'rock'){
+        case 'rock': 
+            if( player == 'rock'){
             res = "It's a tie! There are no winners in life, only those who don't lose"
-           } else if (player === 'paper'){
+            } else if (player === 'paper'){
             res = "You"
-           } else {
-              res = "Computer";
-           }
-           break;
+            } else {
+                res = "Computer";
+            }
+            break;
         case 'paper':
             if( player == 'paper'){
                res = "It's a tie! There are no winners in life, only those who don't lose"
@@ -45,8 +45,8 @@ const playRound = () =>{
                 res = "Computer"
             }       
     }
-    document.querySelector('p').textContent = "Winner: " + res
-    
+    document.querySelector('#winner').textContent = "Winner: " + res
+    document.querySelector('p#choices').textContent = 'You ' + player + ", Computer " + computer 
 }
 
 
