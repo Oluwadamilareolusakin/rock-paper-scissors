@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () =>{
     let ccs;
     let go = document.querySelector('button');
     go.addEventListener('click',playRound) 
-    ccs+=playRound.ccs
     console.log(ccs)
 })
 
@@ -17,55 +16,37 @@ document.addEventListener("DOMContentLoaded", () =>{
 const playRound = () =>{
     let player = document.getElementById('player-selection').value.toLowerCase();
     let computer = computerPlay();
-    let ccs;
-    let chs;
-    let compscore=0;
-    let humscore = 0;
 
     switch(computer){
         case 'rock':
            if( player == 'rock'){
-            console.log("It's a tie!")
-            //return("It's a tie!")
+            res = "It's a tie! There are no winners in life, only those who don't lose"
            } else if (player === 'paper'){
-            console.log("You won!")
-            humscore+=1;
-            //return ("You won!")
+            res = "You"
            } else {
-            console.log("You lost")
-            //return ("You lost")
-            compscore+=1;
+              res = "Computer";
            }
            break;
         case 'paper':
             if( player == 'paper'){
-                console.log("It's a tie!")
-                //return("It's a tie!")
+               res = "It's a tie! There are no winners in life, only those who don't lose"
             } else if (player == 'scissors'){
-                console.log("You won!")
-                humscore+=1;
-                //return ("You won!")
+                res = "You"
             } else {
-                console.log("You lost")
-                //return ("You lost")
-                compscore+=1;
+                res = "Computer"
             } 
             break;
         case 'scissors':
             if( player == 'scissors'){
-                //console.log("It's a tie!")
-                console.log("It's a tie!")
+                res = "It's a tie! There are no winners in life, only those who don't lose"
             } else if (player == 'rock'){
-                //console.log("You won!")
-                console.log("You won!")
-                humscore+=1;
+                res = "You"
             } else {
-                //console.log("You lost")
-                console.log(compscore+=1)
-                console.log("You lost")
-            }   
-    return chs += humscore, ccs += compscore;
-}
+                res = "Computer"
+            }       
+    }
+    document.querySelector('p').textContent = "Winner: " + res
+    
 }
 
 
