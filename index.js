@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
 const playRound = () =>{
-    let player = document.getElementById('player-selection').value.toLowerCase();
+    let player = document.getElementById('player-selection').value.toLowerCase().trim();
     let computer = computerPlay();
 
     switch(computer){
