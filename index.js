@@ -22,30 +22,30 @@ const playRound = () =>{
             if( player == 'rock'){
             res = "It's a tie! There are no winners in life, only those who don't lose"
             } else if (player === 'paper'){
-            res = "You"
+            res = "You won! Or did you just lose at losing ? :)"
             } else {
-                res = "Computer";
+                res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)";
             }
             break;
         case 'paper':
             if( player == 'paper'){
                res = "It's a tie! There are no winners in life, only those who don't lose"
             } else if (player == 'scissors'){
-                res = "You"
+                res = "You won! Or did you just lose at losing ? :)"
             } else {
-                res = "Computer"
+                res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)"
             } 
             break;
         case 'scissors':
             if( player == 'scissors'){
                 res = "It's a tie! There are no winners in life, only those who don't lose"
             } else if (player == 'rock'){
-                res = "You"
+                res = "You won! Or did you just lose at losing ? :)"
             } else {
-                res = "Computer"
+                res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)"
             }       
     }
-    document.querySelector('#winner').textContent = "Winner: " + res
+    document.querySelector('#winner').textContent = res
     document.querySelector('p#choices').textContent = 'You ' + player + ", Computer " + computer 
 }
 
