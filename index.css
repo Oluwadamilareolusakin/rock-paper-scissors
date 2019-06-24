@@ -27,19 +27,22 @@ a{
 
 input{
     width: 35em;
-    height: 2.8em;
+    height: 4em;
     padding: 0 1em;
+    font-size: 1em;
+    border-radius: 7px 0 0 7px;
 }
 
 button{
     background-color: #27b573;
     color: white;
     border: none;
-    padding: 1em 3em;
+    padding: 2em 3em;
+    border-radius: 0 7px 7px 0;
 }
 
 p{
-    font-size: 2em;
+    font-size: 1.7em;
     color: white;
     text-align: center;
 }
