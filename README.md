@@ -1,7 +1,7 @@
 # Rockpaper Scissors
 ## By Tolulope Olusakin
 
-> This is a rockpaper scissors game to while away time and have a bit of fun.
+> This is a rockpaper scissors game I created with witty celebratory comments to help you relax and have a bit of fun.
 
 ### [Give it a try](https://oluwadamilareolusakin.github.io/rock-paper-scissors/) 
 
