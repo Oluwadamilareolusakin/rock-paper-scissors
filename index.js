@@ -5,49 +5,57 @@ function computerPlay(){
     //console.log(outcomes[x])
 }
 
-document.addEventListener("DOMContentLoaded", () =>{
-    let ccs;
-    let go = document.querySelector('button');
-    go.addEventListener('click',playRound) 
-    console.log(ccs)
-})
-
-
-const playRound = () =>{
-    let player = document.getElementById('player-selection').value.toLowerCase().trim();
-    let computer = computerPlay();
-
-    switch(computer){
-        case 'rock': 
-            if( player == 'rock'){
-            res = "It's a tie! There are no winners in life, only those who don't lose"
-            } else if (player === 'paper'){
-            res = "You won! Or did you just lose at losing ? :)"
-            } else {
-                res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)";
+const game = (
+    () => {
+        let numOfRounds = 0;
+        const playRound = (e) =>{
+            let playerSymbol = e.target.innerHTML.toLowerCase();
+            let computer = computerPlay();
+            
+            if (numOfRounds < 6) {
+                switch(computer){
+                    case 'rock': 
+                        if( playerSymbol == 'rock'){
+                        res = "It's a tie! There are no winners in life, only those who don't lose"
+                        } else if (playerSymbol === 'paper'){
+                        res = "You won! Or did you just lose at losing ? :)"
+                        } else {
+                            res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)";
+                        }
+                        break;
+                    case 'paper':
+                        if( playerSymbol == 'paper'){
+                           res = "It's a tie! There are no winners in life, only those who don't lose"
+                        } else if (playerSymbol == 'scissors'){
+                            res = "You won! Or did you just lose at losing ? :)"
+                        } else {
+                            res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)"
+                        } 
+                        break;
+                    case 'scissors':
+                        if( playerSymbol == 'scissors'){
+                            res = "It's a tie! There are no winners in life, only those who don't lose"
+                        } else if (playerSymbol == 'rock'){
+                            res = "You won! Or did you just lose at losing ? :)"
+                        } else {
+                            res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)"
+                        }       
+                }
+                document.querySelector('#winner').textContent = res
+                document.querySelector('p#choices').textContent = 'You ' + playerSymbol + ", Computer " + computer 
+                numOfRounds++
             }
-            break;
-        case 'paper':
-            if( player == 'paper'){
-               res = "It's a tie! There are no winners in life, only those who don't lose"
-            } else if (player == 'scissors'){
-                res = "You won! Or did you just lose at losing ? :)"
-            } else {
-                res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)"
-            } 
-            break;
-        case 'scissors':
-            if( player == 'scissors'){
-                res = "It's a tie! There are no winners in life, only those who don't lose"
-            } else if (player == 'rock'){
-                res = "You won! Or did you just lose at losing ? :)"
-            } else {
-                res = "Computer won this time! The reign of the machina begins now! (Evil Laugh)"
-            }       
+        }
+
+        return {
+            numOfRounds, playRound
+        }
     }
-    document.querySelector('#winner').textContent = res
-    document.querySelector('p#choices').textContent = 'You ' + player + ", Computer " + computer 
-}
+)()
 
 
 
+document.addEventListener("DOMContentLoaded", () =>{
+    let buttons = document.querySelectorAll('.button');
+    buttons.forEach((button) => button.addEventListener('click', game.playRound))
+})
